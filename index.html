@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>MAGAR cocina &amp; baño - Reformamos tu cocina y baño con garantía</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#9e3d00",
+          "background": "#eefcfd",
+          "surface-dim": "#cfdddd",
+          "outline-variant": "#e0c0b2",
+          "on-secondary-container": "#526478",
+          "surface-container": "#e3f0f1",
+          "on-secondary": "#ffffff",
+          "surface-bright": "#eefcfd",
+          "on-background": "#121e1f",
+          "inverse-on-surface": "#e6f3f4",
+          "outline": "#8c7166",
+          "surface-container-lowest": "#ffffff",
+          "surface-variant": "#d8e5e6",
+          "on-surface": "#121e1f",
+          "on-primary": "#ffffff",
+          "secondary": "#4e6073",
+          "surface": "#eefcfd",
+          "on-primary-container": "#fffbff",
+          "inverse-primary": "#ffb595",
+          "surface-tint": "#a23f00",
+          "tertiary": "#5b5c59",
+          "on-error": "#ffffff",
+          "secondary-container": "#cfe2f9",
+          "surface-container-highest": "#d8e5e6",
+          "on-tertiary": "#ffffff",
+          "on-surface-variant": "#594238",
+          "surface-container-low": "#e9f6f7",
+          "surface-container-high": "#ddebec",
+          "inverse-surface": "#263334",
+          "error": "#ba1a1a",
+          "primary-container": "#c64f00",
+          "secondary-fixed": "#d1e4fb"
+        },
+        borderRadius: {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        fontFamily: {
+          "h1": ["Noto Serif"],
+          "h2": ["Noto Serif"],
+          "h3": ["Noto Serif"],
+          "label": ["Manrope"],
+          "button": ["Manrope"],
+          "body-sm": ["Manrope"],
+          "body-md": ["Manrope"],
+          "body-lg": ["Manrope"]
+        },
+        fontSize: {
+          "h1-mobile": ["20px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "700" }],
+          "h1": ["50px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "700" }],
+          "h2-mobile": ["24px", { lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600" }],
+          "h2": ["36px", { lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600" }],
+          "h3": ["24px", { lineHeight: "1.4", fontWeight: "600" }],
+          "h3-mobile": ["20px", { lineHeight: "1.4", fontWeight: "600" }],
+          "label": ["12px", { lineHeight: "1", letterSpacing: "0.02em", fontWeight: "600" }],
+          "button": ["14px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "700" }],
+          "body-sm": ["14px", { lineHeight: "1.5", fontWeight: "400" }],
+          "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+          "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }]
+        },
+        maxWidth: {
+          "container-max": "1280px"
+        },
+        spacing: {
+          "xs": "4px",
+          "sm": "12px",
+          "md": "24px",
+          "lg": "48px",
+          "xl": "80px",
+          "gutter": "16px",
+          "gutter-md": "24px"
+        }
+      }
+    }
+  }
+</script>
+<style>
+  body { min-height: 100dvh; }
+
+  /* Mobile menu */
+  #mobile-menu { display: none; }
+  #mobile-menu.open { display: flex; }
+
+  /* Smooth scroll offset for fixed header */
+  html { scroll-padding-top: 64px; }
+</style>
+</head>
+<body class="bg-[#eefcfd] text-[#121e1f] antialiased overflow-x-hidden" style="font-family: Manrope, sans-serif;">
+
+<!-- ===================== HEADER ===================== -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#eefcfd]/90 backdrop-blur-md border-b border-[#e0c0b2] shadow-sm">
+  <div class="flex items-center justify-between px-4 md:px-6 py-3 max-w-[1280px] mx-auto">
+    <!-- Logo: shows "MAGAR" on mobile, full name on desktop -->
+    <a href="#" class="flex items-center min-w-0">
+     <span class="font-bold tracking-tight text-[#9e3d00] text-[16px] md:text-2xl" style="font-family: 'Noto Serif', serif;">
+    MAGAR <span class="opacity-80 font-normal">cocina &amp; baño</span>
+    </a>
+    <!-- Desktop nav + CTA -->
+    <div class="hidden md:flex items-center gap-6">
+      <nav class="flex items-center gap-6 text-sm font-semibold text-[#594238]" style="font-family: Manrope, sans-serif; letter-spacing: 0.02em;">
+        <a href="#servicios" class="hover:text-[#9e3d00] transition-colors">Servicios</a>
+        <a href="#proyectos" class="hover:text-[#9e3d00] transition-colors">Proyectos</a>
+        <a href="#contacto" class="hover:text-[#9e3d00] transition-colors">Contacto</a>
+      </nav>
+      <button class="font-bold text-sm tracking-widest bg-[#9e3d00] text-white px-5 py-3 rounded-lg hover:opacity-80 transition-opacity" style="font-family: Manrope, sans-serif; letter-spacing: 0.05em;">
+        PEDIR PRESUPUESTO
+      </button>
+    </div>
+
+    <!-- Mobile hamburger -->
+    <button id="menu-btn" class="md:hidden text-[#9e3d00] p-1 flex-shrink-0" aria-label="Abrir menú">
+      <span class="material-symbols-outlined text-3xl">menu</span>
+    </button>
+  </div>
+
+  <!-- Mobile dropdown menu -->
+  <div id="mobile-menu" class="md:hidden flex-col bg-[#eefcfd] border-t border-[#e0c0b2] px-4 py-4 gap-4">
+    <a href="#servicios" class="block text-[#121e1f] font-semibold py-2 border-b border-[#e0c0b2]" onclick="closeMobileMenu()">Servicios</a>
+    <a href="#proyectos" class="block text-[#121e1f] font-semibold py-2 border-b border-[#e0c0b2]" onclick="closeMobileMenu()">Proyectos</a>
+    <a href="#contacto" class="block text-[#121e1f] font-semibold py-2 border-b border-[#e0c0b2]" onclick="closeMobileMenu()">Contacto</a>
+    <a href="#contacto" class="block w-full text-center font-bold text-sm tracking-widest bg-[#9e3d00] text-white px-5 py-3 rounded-lg mt-2" style="letter-spacing: 0.05em;" onclick="closeMobileMenu()">
+      PEDIR PRESUPUESTO GRATIS
+    </a>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="relative pt-14 min-h-[100svh] md:min-h-[707px] flex flex-col justify-center bg-cover bg-center"
+  style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1920&auto=format&fit=crop');">
+  <div class="absolute inset-0 bg-[#eefcfd]/70 backdrop-blur-sm"></div>
+  <div class="relative z-10 px-4 md:px-6 max-w-[1280px] mx-auto w-full flex flex-col items-center md:items-start text-center md:text-left py-12 md:py-20">
+
+    <!-- Hero title: smaller on mobile (20px), same on desktop (48px) -->
+    <h1 class="text-[#121e1f] max-w-2xl mb-5 text-[20px] leading-tight font-bold md:text-[48px]" style="font-family: 'Noto Serif', serif; letter-spacing: -0.02em;">
+      Especialistas en transformar tu cocina &amp; baño: Calidad, diseño y garantía en cada reforma
+    </h1>
+
+    <p class="text-[#594238] max-w-xl mb-8 text-base md:text-lg leading-relaxed" style="font-family: Manrope, sans-serif;">
+      Presupuesto gratuito en 24 horas. Especialistas en reformas de cocinas y baños con más de 500 obras realizadas.
+    </p>
+
+    <!-- CTA Buttons -->
+    <div class="flex flex-col sm:flex-row gap-3 mb-8 w-full sm:w-auto">
+      <a href="#contacto" class="font-bold text-sm tracking-widest bg-[#9e3d00] text-white px-6 py-4 rounded-lg text-center hover:opacity-90 transition-opacity" style="letter-spacing: 0.05em; font-family: Manrope, sans-serif;">
+        SOLICITAR PRESUPUESTO GRATIS
+      </a>
+      <a href="#proyectos" class="font-bold text-sm tracking-widest border-2 border-[#9e3d00] text-[#9e3d00] px-6 py-4 rounded-lg text-center hover:bg-[#9e3d00]/10 transition-colors" style="letter-spacing: 0.05em; font-family: Manrope, sans-serif;">
+        VER PROYECTOS
+      </a>
+    </div>
+
+    <!-- Trust badges -->
+    <div class="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2" style="font-family: Manrope, sans-serif;">
+      <div class="flex items-center gap-1.5 text-[#594238] text-xs font-semibold tracking-wide">
+        <span class="material-symbols-outlined text-[#9e3d00] text-base">check_circle</span>
+        <span>Sin compromiso</span>
+      </div>
+      <div class="flex items-center gap-1.5 text-[#594238] text-xs font-semibold tracking-wide">
+        <span class="material-symbols-outlined text-[#9e3d00] text-base">check_circle</span>
+        <span>Respuesta en 24h</span>
+      </div>
+      <div class="flex items-center gap-1.5 text-[#594238] text-xs font-semibold tracking-wide">
+        <span class="material-symbols-outlined text-[#9e3d00] text-base">check_circle</span>
+        <span>Garantía 2 años</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TRUST BAR ===================== -->
+<section class="bg-[#e3f0f1] py-6 md:py-8 border-y border-[#e0c0b2]">
+  <div class="max-w-[1280px] mx-auto px-4 md:px-6">
+    <!-- Mobile: 2x2 grid | Desktop: row -->
+    <div class="grid grid-cols-2 md:flex md:flex-row md:justify-center gap-6 md:gap-16">
+      <div class="flex items-center gap-3 text-[#121e1f]">
+        <span class="text-2xl">🏠</span>
+        <div>
+          <div class="text-xl font-bold" style="font-family: 'Noto Serif', serif;">500+</div>
+          <div class="text-xs font-semibold text-[#594238] tracking-wide" style="font-family: Manrope, sans-serif;">Proyectos Realizados</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-3 text-[#121e1f]">
+        <span class="text-2xl">📅</span>
+        <div>
+          <div class="text-xl font-bold" style="font-family: 'Noto Serif', serif;">15 Años</div>
+          <div class="text-xs font-semibold text-[#594238] tracking-wide" style="font-family: Manrope, sans-serif;">de Experiencia</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-3 text-[#121e1f]">
+        <span class="text-2xl">🛡️</span>
+        <div>
+          <div class="text-xl font-bold" style="font-family: 'Noto Serif', serif;">2 Años</div>
+          <div class="text-xs font-semibold text-[#594238] tracking-wide" style="font-family: Manrope, sans-serif;">de Garantía</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-3 text-[#121e1f]">
+        <span class="text-2xl">⭐</span>
+        <div>
+          <div class="text-xl font-bold" style="font-family: 'Noto Serif', serif;">4.8/5</div>
+          <div class="text-xs font-semibold text-[#594238] tracking-wide" style="font-family: Manrope, sans-serif;">Valoración Media</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICIOS ===================== -->
+<section id="servicios" class="py-12 md:py-20 px-4 md:px-6 max-w-[1280px] mx-auto">
+  <h2 class="text-[24px] md:text-[36px] font-semibold text-center mb-10 md:mb-16" style="font-family: 'Noto Serif', serif; letter-spacing: -0.01em;">
+    ¿Qué reforma necesitas?
+  </h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+    <!-- Card 1 -->
+    <div class="bg-white border border-[#e0c0b2] rounded-xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow">
+      <span class="material-symbols-outlined text-[#9e3d00] text-5xl mb-4 block">countertops</span>
+      <h3 class="text-xl font-semibold mb-2" style="font-family: 'Noto Serif', serif;">Cocinas</h3>
+      <p class="text-sm text-[#594238] leading-relaxed mb-4" style="font-family: Manrope, sans-serif;">Diseño moderno y funcional adaptado a tu estilo de vida.</p>
+      <a class="text-sm font-bold text-[#9e3d00] hover:underline flex items-center gap-1 tracking-wide" href="#proyectos" style="font-family: Manrope, sans-serif;">
+        Ver más <span class="material-symbols-outlined text-base">arrow_forward</span>
+      </a>
+    </div>
+    <!-- Card 2 -->
+    <div class="bg-white border border-[#e0c0b2] rounded-xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow">
+      <span class="material-symbols-outlined text-[#9e3d00] text-5xl mb-4 block">bathtub</span>
+      <h3 class="text-xl font-semibold mb-2" style="font-family: 'Noto Serif', serif;">Baños</h3>
+      <p class="text-sm text-[#594238] leading-relaxed mb-4" style="font-family: Manrope, sans-serif;">Espacios de relax con materiales de primera calidad.</p>
+      <a class="text-sm font-bold text-[#9e3d00] hover:underline flex items-center gap-1 tracking-wide" href="#proyectos" style="font-family: Manrope, sans-serif;">
+        Ver más <span class="material-symbols-outlined text-base">arrow_forward</span>
+      </a>
+    </div>
+    <!-- Card 3 -->
+    <div class="bg-white border border-[#e0c0b2] rounded-xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow">
+      <span class="material-symbols-outlined text-[#9e3d00] text-5xl mb-4 block">home_repair_service</span>
+      <h3 class="text-xl font-semibold mb-2" style="font-family: 'Noto Serif', serif;">Reformas Integrales</h3>
+      <p class="text-sm text-[#594238] leading-relaxed mb-4" style="font-family: Manrope, sans-serif;">Renovación completa de tu hogar de principio a fin.</p>
+      <a class="text-sm font-bold text-[#9e3d00] hover:underline flex items-center gap-1 tracking-wide" href="#proyectos" style="font-family: Manrope, sans-serif;">
+        Ver más <span class="material-symbols-outlined text-base">arrow_forward</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROYECTOS ===================== -->
+<section id="proyectos" class="py-12 md:py-20 px-4 md:px-6 max-w-[1280px] mx-auto">
+  <h2 class="text-[24px] md:text-[36px] font-semibold text-center mb-10 md:mb-16" style="font-family: 'Noto Serif', serif; letter-spacing: -0.01em;">
+    Nuestros Proyectos
+  </h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+    <!-- Kitchen 1 -->
+    <div class="group flex flex-col gap-3 cursor-pointer">
+      <div class="relative overflow-hidden rounded-2xl aspect-[4/3] shadow-sm">
+        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=800&auto=format&fit=crop" alt="Reforma de cocina moderna de lujo" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" loading="lazy">
+      </div>
+      <div class="px-1">
+        <h3 class="text-lg font-semibold mb-0.5" style="font-family: 'Noto Serif', serif;">Reforma de Cocina</h3>
+        <p class="text-sm text-[#594238]" style="font-family: Manrope, sans-serif;">Reforma integral en Ronda</p>
+      </div>
+    </div>
+    <!-- Kitchen 2 -->
+    <div class="group flex flex-col gap-3 cursor-pointer">
+      <div class="relative overflow-hidden rounded-2xl aspect-[4/3] shadow-sm">
+        <img src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?q=80&w=800&auto=format&fit=crop" alt="Reforma de cocina moderna" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" loading="lazy">
+      </div>
+      <div class="px-1">
+        <h3 class="text-lg font-semibold mb-0.5" style="font-family: 'Noto Serif', serif;">Reforma de Cocina</h3>
+        <p class="text-sm text-[#594238]" style="font-family: Manrope, sans-serif;">Reforma integral en Ronda</p>
+      </div>
+    </div>
+    <!-- Kitchen 3 -->
+    <div class="group flex flex-col gap-3 cursor-pointer">
+      <div class="relative overflow-hidden rounded-2xl aspect-[4/3] shadow-sm">
+        <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=800&auto=format&fit=crop" alt="Diseño de cocina minimalista" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" loading="lazy">
+      </div>
+      <div class="px-1">
+        <h3 class="text-lg font-semibold mb-0.5" style="font-family: 'Noto Serif', serif;">Reforma de Cocina</h3>
+        <p class="text-sm text-[#594238]" style="font-family: Manrope, sans-serif;">Reforma integral en Ronda</p>
+      </div>
+    </div>
+    <!-- Bathroom 1 -->
+    <div class="group flex flex-col gap-3 cursor-pointer">
+      <div class="relative overflow-hidden rounded-2xl aspect-[4/3] shadow-sm">
+        <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=800&auto=format&fit=crop" alt="Baño de lujo moderno" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" loading="lazy">
+      </div>
+      <div class="px-1">
+        <h3 class="text-lg font-semibold mb-0.5" style="font-family: 'Noto Serif', serif;">Reforma de Baño</h3>
+        <p class="text-sm text-[#594238]" style="font-family: Manrope, sans-serif;">Reforma integral en Ronda</p>
+      </div>
+    </div>
+    <!-- Bathroom 2 -->
+    <div class="group flex flex-col gap-3 cursor-pointer">
+      <div class="relative overflow-hidden rounded-2xl aspect-[4/3] shadow-sm">
+        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" alt="Lavabo moderno de diseño" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" loading="lazy">
+      </div>
+      <div class="px-1">
+        <h3 class="text-lg font-semibold mb-0.5" style="font-family: 'Noto Serif', serif;">Reforma de Baño</h3>
+        <p class="text-sm text-[#594238]" style="font-family: Manrope, sans-serif;">Reforma integral en Ronda</p>
+      </div>
+    </div>
+    <!-- Bathroom 3 -->
+    <div class="group flex flex-col gap-3 cursor-pointer">
+      <div class="relative overflow-hidden rounded-2xl aspect-[4/3] shadow-sm">
+        <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?q=80&w=800&auto=format&fit=crop" alt="Cuarto de baño luminoso" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" loading="lazy">
+      </div>
+      <div class="px-1">
+        <h3 class="text-lg font-semibold mb-0.5" style="font-family: 'Noto Serif', serif;">Reforma de Baño</h3>
+        <p class="text-sm text-[#594238]" style="font-family: Manrope, sans-serif;">Reforma integral en Ronda</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LEAD CAPTURE / CONTACTO ===================== -->
+<section id="contacto" class="bg-[#c64f00] text-white py-12 md:py-20 px-4 md:px-6 relative overflow-hidden">
+  <div class="max-w-[1280px] mx-auto relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 lg:gap-12">
+    <!-- Left text -->
+    <div class="w-full lg:w-1/2">
+      <h2 class="text-[24px] md:text-[36px] font-semibold mb-4 text-white" style="font-family: 'Noto Serif', serif; letter-spacing: -0.01em;">
+        ¿Listo para transformar tu hogar?
+      </h2>
+      <p class="text-base md:text-lg leading-relaxed opacity-90" style="font-family: Manrope, sans-serif;">
+        Presupuesto gratuito en 24 horas. Especialistas en reformas de cocinas y baños con más de 500 obras realizadas.
+      </p>
+    </div>
+    <!-- Form card -->
+    <div class="w-full lg:w-1/2 max-w-md bg-[#eefcfd] rounded-xl p-6 md:p-8 shadow-lg">
+      <form class="flex flex-col gap-5" onsubmit="enviarWhatsApp(event)">
+        <div>
+          <label class="block text-xs font-semibold text-[#121e1f] mb-1.5 tracking-wide uppercase" for="nombre" style="font-family: Manrope, sans-serif;">Nombre</label>
+          <input
+            class="w-full bg-white border-b-2 border-[#e0c0b2] focus:border-[#9e3d00] px-3 py-3 outline-none text-[#121e1f] text-base transition-colors"
+            id="nombre" placeholder="Tu nombre" type="text" style="font-family: Manrope, sans-serif;">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-[#121e1f] mb-1.5 tracking-wide uppercase" for="telefono" style="font-family: Manrope, sans-serif;">Teléfono</label>
+          <input
+            class="w-full bg-white border-b-2 border-[#e0c0b2] focus:border-[#9e3d00] px-3 py-3 outline-none text-[#121e1f] text-base transition-colors"
+            id="telefono" placeholder="Tu teléfono" type="tel" style="font-family: Manrope, sans-serif;">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-[#121e1f] mb-1.5 tracking-wide uppercase" for="tipo" style="font-family: Manrope, sans-serif;">Tipo de reforma</label>
+          <select
+            class="w-full bg-white border-b-2 border-[#e0c0b2] focus:border-[#9e3d00] px-3 py-3 outline-none text-[#121e1f] text-base appearance-none transition-colors"
+            id="tipo" style="font-family: Manrope, sans-serif;">
+            <option>Cocina</option>
+            <option>Baño</option>
+            <option>Reforma integral</option>
+          </select>
+        </div>
+        <button
+          class="mt-1 w-full font-bold text-sm tracking-widest bg-[#9e3d00] text-white py-4 rounded-lg hover:opacity-90 transition-opacity"
+          type="submit" style="font-family: Manrope, sans-serif; letter-spacing: 0.05em;">
+          QUIERO MI PRESUPUESTO GRATIS
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="bg-[#d8e5e6] w-full py-10 border-t border-[#e0c0b2]">
+  <div class="max-w-[1280px] mx-auto px-4 md:px-6 flex flex-col gap-6 md:flex-row md:justify-between md:items-center">
+    <!-- Brand -->
+    <div>
+      <span class="text-xl font-bold tracking-tight text-[#9e3d00]" style="font-family: 'Noto Serif', serif;">MAGAR cocina &amp; baño</span>
+    </div>
+    <!-- Nav -->
+    <nav class="flex flex-wrap gap-x-5 gap-y-2 text-sm text-[#594238]" style="font-family: Manrope, sans-serif;">
+      <a class="hover:text-[#9e3d00] transition-colors underline" href="#servicios">Servicios</a>
+      <a class="hover:text-[#9e3d00] transition-colors underline" href="#proyectos">Proyectos</a>
+      <a class="hover:text-[#9e3d00] transition-colors underline" href="#">Sobre Nosotros</a>
+      <a class="hover:text-[#9e3d00] transition-colors underline" href="#">Testimonios</a>
+      <a class="hover:text-[#9e3d00] transition-colors underline" href="#contacto">Contacto</a>
+      <a class="hover:text-[#9e3d00] transition-colors underline" href="#">Aviso Legal</a>
+    </nav>
+    <!-- Copyright -->
+    <div class="text-sm text-[#594238]" style="font-family: Manrope, sans-serif;">
+      © 2026 MAGAR cocina &amp; baño.<br>
+      Calle Genal, 11B, 29400 Ronda, Málaga
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== FLOATING WHATSAPP ===================== -->
+<a class="fixed bottom-6 right-4 bg-[#25D366] text-white p-3.5 rounded-full shadow-lg z-40 hover:scale-110 transition-transform flex items-center justify-center"
+  href="https://wa.me/34611760606?text=Hola%2C%20he%20visto%20vuestra%20web%20y%20me%20gustar%C3%ADa%20haceros%20una%20consulta%20sobre%20una%20reforma."
+  target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+  <span class="material-symbols-outlined text-[28px]">chat</span>
+</a>
+
+<!-- ===================== COOKIE BANNER ===================== -->
+<div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-[#263334] text-[#e6f3f4] px-4 py-3 text-center text-sm z-50 flex flex-col sm:flex-row justify-center items-center gap-3" style="font-family: Manrope, sans-serif;">
+  <span>Utilizamos cookies para mejorar su experiencia.</span>
+  <button
+    onclick="document.getElementById('cookie-banner').style.display='none'"
+    class="bg-[#eefcfd] text-[#121e1f] px-4 py-1.5 rounded font-bold text-xs hover:bg-[#d8e5e6] transition-colors whitespace-nowrap"
+    style="font-family: Manrope, sans-serif;">
+    Aceptar
+  </button>
+</div>
+
+<script>
+  // Mobile menu toggle
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+    menuBtn.querySelector('.material-symbols-outlined').textContent =
+      mobileMenu.classList.contains('open') ? 'close' : 'menu';
+  });
+
+  function closeMobileMenu() {
+    mobileMenu.classList.remove('open');
+    menuBtn.querySelector('.material-symbols-outlined').textContent = 'menu';
+  }
+
+  // WhatsApp form submission
+  function enviarWhatsApp(e) {
+    e.preventDefault();
+    const nombre = document.getElementById('nombre').value.trim();
+    const telefono = document.getElementById('telefono').value.trim();
+    const tipo = document.getElementById('tipo').value;
+
+    if (!nombre || !telefono) {
+      alert('Por favor, rellena tu nombre y teléfono para continuar.');
+      return;
+    }
+
+    const mensaje = `Hola, me gustaría pedir un presupuesto. Mi nombre es ${nombre}, mi teléfono es ${telefono} y me interesa una reforma de ${tipo}.`;
+    const url = `https://wa.me/34611760606?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
+  }
+</script>
+</body>
+</html>
